@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}Marca detalhes{% endblock %}
+{% block content %}
+
+<div class="container mt-4">
+    <h1 class="display-6">Deletar da Marca</h1>
+    <div class="card">
+        <div class="card-body">
+             
+             <p class="card-text">tem certeza que deseja excluir a categoria <strong>{{ object.name }} ?</strong></p>
+             <form action="" method="post">
+                {% csrf_token %}
+                <button type="submit" class="btn btn-secondary btn-sm">Deletar</button>
+             </form>
+        </div>
+    </div>
+    <a href="{% url 'brand_list' %}" class="btn btn-secondary mt-3 ">Voltar para a lista</a>    
+</div>
+{% endblock%}

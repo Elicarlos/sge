@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}Fornecedor detalhes{% endblock %}
+{% block content %}
+
+<div class="container mt-4">
+    <h1 class="display-6">Detalhes da Fornecedor</h1>
+    <div class="card">
+        <div class="card-body">
+             <h3 class="card-title">{{ object.title }}</h3>
+             <p class="card-text">Categoria: {{ object.category }}</p>
+             <p class="card-text">Marca: {{ object.brand }}</p>
+             <p class="card-text">{{ object.description }}</p>
+             <p class="card-text">Numero de Série: {{ object.serie_numeber }}</p>
+             <p class="card-text">Preco de Custo: {{ object.cost_price }}</p>
+             <p class="card-text">Preco de Venda: {{ object.selling_price }}</p>
+             <p class="card-text">Quantidade em estoque: {{ object.quantity }}</p>
+        </div>
+    </div>
+    <a href="{% url 'product_list' %}" class="btn btn-secondary mt-3 ">Voltar para a lista</a>    
+</div>
+{% endblock%}
